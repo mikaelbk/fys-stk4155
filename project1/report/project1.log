@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800) (preloaded format=pdflatex 2018.4.16)  26 SEP 2018 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800) (preloaded format=pdflatex 2018.4.16)  26 SEP 2018 19:40
 entering extended mode
 **./project1.tex
 (project1.tex
@@ -1654,8 +1654,8 @@ G,.JBIG2,.JB2,.eps]
 
  [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] (introd
-uction.tex) [3] (theory.tex
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] (introducti
+on.tex) [2] (theory.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
@@ -1665,29 +1665,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-) [4] (project1.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+[3]) [4] (project1.aux) ) 
 Here is how much of TeX's memory you used:
- 12312 strings out of 495198
- 222875 string characters out of 3180954
- 262355 words of memory out of 3000000
- 15549 multiletter control sequences out of 15000+200000
- 537100 words of font info for 46 fonts, out of 3000000 for 9000
+ 12310 strings out of 495198
+ 222848 string characters out of 3180954
+ 263379 words of memory out of 3000000
+ 15548 multiletter control sequences out of 15000+200000
+ 536565 words of font info for 44 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,15n,38p,10407b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
-</home/mikael/.miktex/texmfs/install/fonts/type1/public/a
-msfonts/cm/cmbx10.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/a
-msfonts/cm/cmbx9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/am
-sfonts/cmextra/cmex9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public
-/amsfonts/cm/cmmi9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/am
-sfonts/cm/cmr17.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/ams
-fonts/cm/cmr6.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb>
-Output written on project1.pdf (4 pages, 140724 bytes).
+</home/mikael/.miktex/texmfs/install/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/publi
+c/amsfonts/cm/cmbx9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public
+/amsfonts/cmextra/cmex9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/pu
+blic/amsfonts/cm/cmmi6.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/pub
+lic/amsfonts/cm/cmmi9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/am
+sfonts/cm/cmr9.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/amsf
+onts/cm/cmsy6.pfb></home/mikael/.miktex/texmfs/install/fonts/type1/public/amsfo
+nts/cm/cmsy9.pfb>
+Output written on project1.pdf (4 pages, 140467 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

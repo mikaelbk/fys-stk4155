@@ -2,11 +2,11 @@
 
 \section{Theory}
 \subsection{Ordinary least squares}
-We want to get a specific solution of the equation
-\[ \hat{y} = \hat{X}\hat{\beta}+\hat{\epsilon} \]
-Where $\hat{y}$ is a vector of our measured values, $\hat{X}$ is a matrix containing variables and determines how we want to fit our data, $\hat{\beta}$ is a vector of the parameters for our fit and $\hat{\epsilon}$ is a vector representing the error in our datapoints. The variables $\hat{y}$ and $\hat{X}$ are fixed and we want to choose parameters $\hat{\beta}$ in such a way that the errors $\hat{\epsilon}$ are minimized. An example might help clarify the situation\\\\
+We want to get a specific solution to the equation
+\begin{equation}\label{eq:fit} \hat{y} = \hat{X}\hat{\beta}+\hat{\epsilon} \end{equation}
+Where $\hat{y}$ is a vector of our measured values, $\hat{X}$ is a matrix containing variables and determines how we want to fit our data, $\hat{\beta}$ is a vector of the parameters for our fit and $\hat{\epsilon}$ is a vector representing the error in our datapoints (often termed the residuals, representing how far off our prediction is from the measurements). The variables $\hat{y}$ and $\hat{X}$ are fixed and we want to choose parameters $\hat{\beta}$ in such a way that the errors $\hat{\epsilon}$ are minimized. An example might help clarify the situation\\\\
 
-Lets say we have conducted an experiment where we have measured the position of a ball launched straight up into the air from a cannon. Neglecting air resistance we know that the analytical solution is on the form of a second order polynomial $x(t)=x_0+v_0t+at^2$, where $x_0$ and $v_0$ are the initial conditions for the position and velocity respectively. This analytical solution is our model, but the actual measured values could (and indeed probably would) differ from this, simply due to errors in the measurement or other effects coming into play that the model has not accounted for (like wind resistance). In any case, if we measured the position $n$ times our linear algebra problem could be stated like this:
+Lets say we have conducted an experiment where we have measured the position of a ball launched straight up into the air from a cannon. Neglecting air resistance we know that the analytical solution is on the form of a second order polynomial $x(t)=x_0+v_0t+at^2$, where $x_0$ and $v_0$ are the initial conditions for the position and velocity respectively. This analytical solution is our model, but the actual measured values could (and indeed probably would) differ from this, simply due to errors in the measurement or other effects coming into play that the model has not accounted for (like air resistance). In any case, if we measured the position $n$ times our linear algebra problem could be stated like this:
 \begin{align*}
 	\begin{bmatrix}
 		x(t_0) \\ x(t_1) \\ \vdots \\ x(t_{n-1}) \\ x(t_n)
@@ -29,7 +29,15 @@ Or, again, stated through vectors and matrix notation
 \begin{align*}
 	\hat{x} = \hat{T} \hat{\beta} + \hat{\epsilon}
 \end{align*}
-With some of the variable names adjusted simply to better indicate the represented values we have in this problem. Note that there are two dimensionalitys coming into play here. $n$ is the number of measurements and determines the length of the column vectors $\hat{x}$ and $\hat{\epsilon}$. In addition there is a second dimension that determines the number of columns in the matrix $\hat{T}$
+With some of the variable names adjusted simply to better indicate the represented values we have in this problem. Essentially we want to determine the variables $x_0$, $v_0$ and $a$ so that the error terms are minimized (the equation has solutions for all $\hat{\beta}$s, but most of those are horrible fits with huge error terms). Note that there are two dimensionalities coming into play here. $n$ is the number of measurements and determines the length of the column vectors $\hat{x}$ and $\hat{\epsilon}$. In addition there is a second dimension that determines the number of columns in the matrix $\hat{T}$ and the length of the vector $\hat{\beta}$. This number, say $m$, indicates the complexity of our model. When doing a polynomial fit, $m-1$ is the order of the polynomial we want to fit our data to. So in this case, where we want to fit a second degree polynomial, we have $m=3$.\\\\
+
+The example above gives an impression of what the variables in the linear algebra equation represents but is quite specific and we can generalize a bit. For instance, it is not necessary to fit a polynomial at all. By changing our $\hat{X}$ matrix we could fit to any orthogonal function that we would like. The number of datapoints can be anything we want as log as $m\leq n$.\\
+
+A key part of the fitting is how to minimize the so called "cost-function". In our case we want to minimize the $\epsilon$'s. There are different ways of doing this, but perhaps the simplest one is to do an \textbf{Ordinary Least Squares} (OLS) fit. That is to say when taking the difference between our predicted values and the measured values (essentially being the residuals) we want the squared sum of the difference for each datapoint to be as low as possible. That is to say that we want to minimize the function
+\begin{align*}
+	Q = \sum_{i=0}^{n-1}\epsilon_i^2 = \hat{\epsilon}^T\hat{\varepsilon} = \qty(\hat{y}-\hat{X}\hat{\beta})^T\qty(\hat{y}-\hat{X}\hat{\beta})
+\end{align*}
+We can see that taking the squared sum of all the elements in $\hat{\epsilon}$ is the same as taking the inner product of the vector with itself, and that we can use equation \ref{eq:fit}
 \subsection{Ridge}
 \subsection{Lasso}
 \subsection{K-fold and and bootstrap}
