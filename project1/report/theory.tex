@@ -1,14 +1,35 @@
+\newcommand{\colVec}[1]{\begin{bmatrix} #1_0 \\ #1_1 \\ \vdots \\ #1_{n-1} \\ #1_{n} \end{bmatrix}}
+
 \section{Theory}
 \subsection{Ordinary least squares}
 We want to get a specific solution of the equation
 \[ \hat{y} = \hat{X}\hat{\beta}+\hat{\epsilon} \]
-Where $\hat{y}$ is a vector of our measured values, $\hat{X}$ is a matrix containing variables and determines how we want to fit our data, $\hat{\beta}$ is a vector of the parameters for our fit and $\hat{\epsilon}$ is a vector representing the error in our datapoints. The variables $\hat{y}$ and $\hat{X}$ are fixed and we want to choose parameters $\hat{\beta}$ in such a way that the errors $\hat{\epsilon}$ are minimized. An example might help clarify the situation\\
-Lets say we have conducted an experiment where we have measured the position of a ball launched straight up into the air from a cannon. Neglecting air resistance we know that the analytical solution is on the form of a second order polynomial $x(t)=x_0+v_0t+at^2$, where $x_0 = x(t=0)$ is the position above ground of the ball before launch and $v_0=v(t=0)$ is the velocity of the ball immidiatly at launch. However, our measured results does not necessarily match this prefectly due to errors. In any case, if we measured the position $n$ times our linear algebra problem could be stated like this:
+Where $\hat{y}$ is a vector of our measured values, $\hat{X}$ is a matrix containing variables and determines how we want to fit our data, $\hat{\beta}$ is a vector of the parameters for our fit and $\hat{\epsilon}$ is a vector representing the error in our datapoints. The variables $\hat{y}$ and $\hat{X}$ are fixed and we want to choose parameters $\hat{\beta}$ in such a way that the errors $\hat{\epsilon}$ are minimized. An example might help clarify the situation\\\\
+
+Lets say we have conducted an experiment where we have measured the position of a ball launched straight up into the air from a cannon. Neglecting air resistance we know that the analytical solution is on the form of a second order polynomial $x(t)=x_0+v_0t+at^2$, where $x_0$ and $v_0$ are the initial conditions for the position and velocity respectively. This analytical solution is our model, but the actual measured values could (and indeed probably would) differ from this, simply due to errors in the measurement or other effects coming into play that the model has not accounted for (like wind resistance). In any case, if we measured the position $n$ times our linear algebra problem could be stated like this:
 \begin{align*}
 	\begin{bmatrix}
-		\\ x(t_0) \\ x(t_1) \\ \vdots \\ x(t_{n-1}) \\ x(t_n)\\
+		x(t_0) \\ x(t_1) \\ \vdots \\ x(t_{n-1}) \\ x(t_n)
 	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		(t_0)^0	&	(t_0)^1	&	(t_0)^2 \\
+		(t_1)^0	&	(t_1)^1	&	(t_1)^2 \\
+		\vdots	&	\vdots	&	\vdots \\
+		(t_{n-1})^0	&	(t_{n-1})^1	&	(t_{n-1})^2 \\
+		(t_{n})^0	&	(t_{n})^1	&	(t_{n})^2
+	\end{bmatrix}
+	\begin{bmatrix}
+		x_0 \\ v_0 \\ a
+	\end{bmatrix}
+	+
+	\colVec{\epsilon}
 \end{align*}
+Or, again, stated through vectors and matrix notation
+\begin{align*}
+	\hat{x} = \hat{T} \hat{\beta} + \hat{\epsilon}
+\end{align*}
+With some of the variable names adjusted simply to better indicate the represented values we have in this problem. Note that there are two dimensionalitys coming into play here. $n$ is the number of measurements and determines the length of the column vectors $\hat{x}$ and $\hat{\epsilon}$. In addition there is a second dimension that determines the number of columns in the matrix $\hat{T}$
 \subsection{Ridge}
 \subsection{Lasso}
 \subsection{K-fold and and bootstrap}
