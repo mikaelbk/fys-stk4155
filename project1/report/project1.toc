@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}introduction}{2}
+\contentsline {section}{\numberline {2}Theory}{2}
+\contentsline {subsection}{\numberline {2.1}Ordinary least squares}{2}
+\contentsline {subsection}{\numberline {2.2}Ridge}{3}
+\contentsline {subsection}{\numberline {2.3}Lasso}{3}
+\contentsline {subsection}{\numberline {2.4}K-fold and and bootstrap}{3}
