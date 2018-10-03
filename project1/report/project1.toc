@@ -1,9 +1,10 @@
 \contentsline {section}{\numberline {1}introduction}{2}
 \contentsline {section}{\numberline {2}Theory}{3}
 \contentsline {subsection}{\numberline {2.1}Ordinary least squares}{3}
-\contentsline {subsection}{\numberline {2.2}Mean square error}{5}
-\contentsline {subsection}{\numberline {2.3}r-score}{5}
-\contentsline {subsection}{\numberline {2.4}$\chi ^2$}{5}
-\contentsline {subsection}{\numberline {2.5}Ridge}{5}
-\contentsline {subsection}{\numberline {2.6}Lasso}{5}
-\contentsline {subsection}{\numberline {2.7}K-fold and and bootstrap}{5}
+\contentsline {subsubsection}{\numberline {2.1.1}Mean square error}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}The chi squared function $\chi ^2$}{5}
+\contentsline {subsection}{\numberline {2.2}r-score}{5}
+\contentsline {subsection}{\numberline {2.3}$\chi ^2$}{5}
+\contentsline {subsection}{\numberline {2.4}Ridge}{5}
+\contentsline {subsection}{\numberline {2.5}Lasso}{5}
+\contentsline {subsection}{\numberline {2.6}K-fold and and bootstrap}{5}

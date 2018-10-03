@@ -44,7 +44,16 @@ We can see that taking the squared sum of all the elements in $\hat{\epsilon}$ i
 	\hat{\beta} = \qty(\hat{X}^T\hat{X})^{-1}\hat{X}^T\hat{y}
 \end{align*}
 And by the magic of linear algebra we have arrived at an analytical solution for the parameters $\hat{\beta}$ we need for an OLS regression. It is, however, important to note that we assume that the matrix $\hat{X}$ here is invertible.
-\subsection{Mean square error}
+\subsubsection{Mean square error}
+The Mean Square Error (\textbf{MSE}) can give a measure of the quality of our estimator. It is defined as
+\begin{equation}\label{mse}
+	MSE(\epsilon) = \frac{1}{n}\sum_n^{n-1}\epsilon^2
+\end{equation}
+As such it can be thought of  as the average of the square of our residuals. We see that our OLS method minimizes the MSE of our predictor variables. Of course, as easily seen from the definition, the MSE can never be negative and lower values means that we have a better prediction (at zero there is a perfect fit).
+\subsubsection{The chi squared function $\chi^2$}
+\begin{equation}\label{chi}
+	\chi^2 = \sum_{i=0}^{n-1}\qty(\frac{\epsilon_i}{\sigma_i})^2 = \hat{\epsilon}^T \hat{\Sigma}^{-2}\hat{\epsilon}
+\end{equation}
 \subsection{r-score}
 \subsection{$\chi^2$}
 \subsection{Ridge}
