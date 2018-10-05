@@ -3,7 +3,7 @@
 \section{Theory}
 \subsection{Ordinary least squares}
 We want to get a specific solution to the equation
-\begin{equation}\label{eq:fit} \hat{y} = \hat{X}\hat{\beta}+\hat{\epsilon} \end{equation}
+\begin{equation}\label{eq: linearFit} \hat{y} = \hat{X}\hat{\beta}+\hat{\epsilon} \end{equation}
 Where $\hat{y}$ is a vector of our measured values, $\hat{X}$ is a matrix containing variables and determines how we want to fit our data, $\hat{\beta}$ is a vector of the parameters for our fit and $\hat{\epsilon}$ is a vector representing the error in our datapoints (often termed the residuals, representing how far off our prediction is from the measurements). The variables $\hat{y}$ and $\hat{X}$ are fixed and we want to choose parameters $\hat{\beta}$ in such a way that the errors $\hat{\epsilon}$ are minimized. An example might help clarify the situation\\\\
 
 Lets say we have conducted an experiment where we have measured the position of a ball launched straight up into the air from a cannon. Neglecting air resistance we know that the analytical solution is on the form of a second order polynomial $x(t)=x_0+v_0t+at^2$, where $x_0$ and $v_0$ are the initial conditions for the position and velocity respectively. This analytical solution is our model, but the actual measured values could (and indeed probably would) differ from this, simply due to errors in the measurement or other effects coming into play that the model has not accounted for (like air resistance). In any case, if we measured the position $n$ times our linear algebra problem could be stated like this:
@@ -44,9 +44,26 @@ We can see that taking the squared sum of all the elements in $\hat{\epsilon}$ i
 	\hat{\beta} = \qty(\hat{X}^T\hat{X})^{-1}\hat{X}^T\hat{y}
 \end{align*}
 And by the magic of linear algebra we have arrived at an analytical solution for the parameters $\hat{\beta}$ we need for an OLS regression. It is, however, important to note that we assume that the matrix $\hat{X}$ here is invertible.
-\subsection{Mean square error}
-\subsection{r-score}
-\subsection{$\chi^2$}
+
+\subsubsection{Mean square error}
+The Mean Square Error (\textbf{MSE}) can give a measure of the quality of our estimator. It is defined as
+\begin{equation}\label{eq: mse}
+	MSE(\epsilon) = \frac{1}{n}\sum_n^{n-1}\epsilon^2
+\end{equation}
+As such it can be thought of  as the average of the square of our residuals. We see that our OLS method minimizes the MSE of our predictor variables. Of course, as easily seen from the definition, the MSE can never be negative and lower values means that we have a better prediction (at zero there is a perfect fit).
+
+%\subsubsection{The chi squared function $\chi^2$}
+%\begin{equation}\label{chi}
+%	\chi^2 = \sum_{i=0}^{n-1}\qty(\frac{\epsilon_i}{\sigma_i})^2 = \hat{\epsilon}^T \hat{\Sigma}^{-2}\hat{\epsilon}
+%\end{equation}
+
+\subsection{Coefficient of variation - $R^2$ score}
+In regression validation the $R^2$ is the gold standard when it comes to measuring goodness of fit. In straight terms it is the proportion of the variance in the dependent variable that is predictable from the independent variable(S) [source wikipedia - coefficient of determination]. 
+\begin{equation}\label{eq: R squared}
+	R^2 = 1 - \frac{ \sum(y_i-\tilde{y}_i)^2 }{ \sum(y_i-\bar{y}_i)^2 }
+\end{equation}
+Where $y_i$ are the indexed response variables (data we want to fit) and $\tilde{y}_i$ is the predictor variables from our model (so $\epsilon_i = y_i - \tilde{y}_i$). The average of the response variables is denoted $\bar{y}_i$. In our case it the second term can also be considered as the ratio of \textbf{MSE} to the variance (the $1/n$ factors kill each other in a fraction). Let's interpret the formula step by step to get an impression of how it differentiates a poor from a good fit. If the residual sum of squares (SS\textsubscript{res}) is low we have a good fit. However, we should compare this to the spread of our response variables. After all, if the response variables are all nicely distributed close to the mean then getting a good SS\textsubscript{res} is not that impressive. We therefore do a sort of normalization in the fraction, taking the scale of our data into consideration. In the simplest polynomial fit, using a zeroth order polynomial (just a constant), we see that our model would just be a constant function of the mean. The sums would be equal, returning unity on the fraction and the total $R^2$ score would be zero. In the other extreme, if our model fits perfectly, then SS\textsubscript{res} would be zero and the $R^2$ score would be one. In this sense we have a span of possible $R^2$ scores between zero and one, from the baseline of the simplest model at zero and a perfect fit at one. 
 \subsection{Ridge}
 \subsection{Lasso}
 \subsection{K-fold and and bootstrap}
+% three central statistical quantities: variance, covariance and expectation value
