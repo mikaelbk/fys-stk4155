@@ -4,5 +4,5 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Mean square error}{4}
 \contentsline {subsection}{\numberline {2.2}Coefficient of variation - $R^2$ score}{5}
 \contentsline {subsection}{\numberline {2.3}Ridge}{5}
-\contentsline {subsection}{\numberline {2.4}Lasso}{5}
-\contentsline {subsection}{\numberline {2.5}K-fold and and bootstrap}{5}
+\contentsline {subsection}{\numberline {2.4}Lasso}{6}
+\contentsline {subsection}{\numberline {2.5}K-fold and and bootstrap}{6}
