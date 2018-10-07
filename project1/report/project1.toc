@@ -5,4 +5,4 @@
 \contentsline {subsection}{\numberline {2.2}$R^2$ score - The Coefficient of Variation}{5}
 \contentsline {subsection}{\numberline {2.3}Ridge}{5}
 \contentsline {subsection}{\numberline {2.4}Lasso}{6}
-\contentsline {subsection}{\numberline {2.5}K-fold and and bootstrap}{7}
+\contentsline {subsection}{\numberline {2.5}K-fold}{7}
