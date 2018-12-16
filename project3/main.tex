@@ -16,7 +16,7 @@
 		\dv{R}{t} = bI - cR
 	\end{align*}
 	% data, model and cost function
-	We can use the solution of the system found by Monte Carlo simulations and fourth order Runge Kutta as a reference when training our neural network. 
+	\\We can use the solution of the system found by Monte Carlo simulations and fourth order Runge Kutta as a reference when training and developing our neural network. Initially our requirement is that the network is able to reliably reproduce the data we gathered from MC and RK4 earlier. As earlier, they should converge at the equilibrium state found through the analytical solution. After this we can reinitialize the neural network and let it find its own solution for weigth optimalization, using an objective function as the feedback parameter. [cost function == objective function?]
 	%trial solution
 	\\Reference: "https://compphysics.github.io/MachineLearning/doc/pub/odenn/pdf/odenn-minted.pdf"
 \end{document}

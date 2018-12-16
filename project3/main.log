@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.11.17)  16 DEC 2018 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.11.17)  16 DEC 2018 22:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -276,11 +276,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--22
-
- []
-
-
 Overfull \hbox (47.72313pt too wide) in paragraph at lines 17--22
 \OT1/cmr/m/n/10 Reference: "https://compphysics.github.io/MachineLearning/doc/p
 ub/odenn/pdf/odenn-
@@ -292,17 +287,17 @@ ub/odenn/pdf/odenn-
 Here is how much of TeX's memory you used:
  10621 strings out of 494889
  196388 string characters out of 3178584
- 229702 words of memory out of 3000000
+ 230702 words of memory out of 3000000
  14289 multiletter control sequences out of 15000+200000
  533397 words of font info for 28 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 47i,9n,65p,546b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,9n,65p,603b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 </home
 /mikael/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home
 /mikael/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home
 /mikael/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/
 mikael/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (1 page, 49448 bytes).
+Output written on main.pdf (1 page, 51080 bytes).
 PDF statistics:
  22 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
