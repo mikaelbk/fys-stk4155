@@ -1,0 +1,22 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{physics}
+
+\author{Mikael B. Kiste}
+\title{project 3}
+
+\begin{document}
+	\section{Nerual networks and PDE's}
+	% UNiversal approximation theorem
+	Neural networks can be useful for solving differential equations, . The Universal approximation theorem states that, under certain conditions, a neural network may approximate any well behaved function to any given precision. A differential equation describes a function by relating it to one of its own derivatives (to some order). In this way they do not describe the function explicitly, but rather its properties, and our job becomes looking for functions that exhibit these properties and thus are solutions to the equation.\\
+	\begin{align*}
+		\dv{S}{t} = cR -\frac{aSI}{N}\\
+		\dv{I}{t} = \frac{aSI}{N}-bI\\
+		\dv{R}{t} = bI - cR
+	\end{align*}
+	% data, model and cost function
+	We can use the solution of the system found by Monte Carlo simulations and fourth order Runge Kutta as a reference when training our neural network. 
+	%trial solution
+	\\Reference: "https://compphysics.github.io/MachineLearning/doc/pub/odenn/pdf/odenn-minted.pdf"
+\end{document}
